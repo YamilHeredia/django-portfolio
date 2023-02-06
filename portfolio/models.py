@@ -8,3 +8,6 @@ class Project(models.Model):
     image = models.ImageField(upload_to='portfolio/media')
     url = models.URLField(blank=True)
     upload_date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
